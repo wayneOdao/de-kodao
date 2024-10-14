@@ -645,32 +645,44 @@ header .search-bar-container label:hover{
 
 @media (max-width:768px){
 
+  /* Make the mobile menu bar visible */
   #menu-bar{
     display: initial;
   }
 
+  /* Navbar will appear as a dropdown on mobile */
   header .navbar{
     position: absolute;
-    top:100%; right:0; left: 0;
+    top:100%;
+    right: 0;
+    left: 0;
     background: #333;
     border-top: .1rem solid rgba(255,255,255,.2);
-    padding:1rem 2rem;
+    padding: 1rem 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
+  /* Active state for the navbar */
   header .navbar.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
+  /* Ensure links are block elements and easier to click */
   header .navbar a{
     display: block;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #222;
     border-radius: .5rem;
-    padding:1.5rem;
-    margin:1.5rem 0;    
-    background:#222;
+    font-size: 2rem;
   }
 
+  /* Reduce icon and logo size */
+  header .icons i, header .logo{
+    font-size: 2rem;
+  }
 }
+
 
 @media (max-width:450px){
 
