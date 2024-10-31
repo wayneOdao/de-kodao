@@ -15,7 +15,7 @@
 }
 
 *::selection{
-  background:var(--orange);
+  background:red;
   color:#fff;
 }
 
@@ -26,47 +26,58 @@ html{
   scroll-behavior: smooth;
 }
 
+/* In your CSS file */
+html, body {
+  overflow-x: hidden;
+}
+
 section{
   padding:2rem 9%;
 }
 
-.heading{
+.heading {
   text-align: center;
-  padding:2.5rem 0
+  padding: 1.5rem 0; /* Reduce padding for the entire heading */
 }
 
-.heading span{
-  font-size: 3.5rem;
-  background:rgba(255, 165, 0,.2);
-  color:var(--orange);
-  border-radius: .5rem;
-  padding:.2rem 1rem;
+.heading span {
+  display: inline-block;
+  font-size: 3.5rem; /* Adjust font size if needed */
+  padding: 0.1rem 0.5rem; /* Decrease padding to reduce space around letters */
+  margin: 0.05rem; /* Decrease margin to reduce spacing between letters */
+  background: rgba(10, 10, 10, 0.2);
+  color: black;
+  border-radius: 0.5rem;
 }
 
-.heading span.space{
-  background:none;
+.heading span.space {
+  background: none;
+  padding: 0;
+  margin: 0.05rem; /* Adjust space span to maintain consistent spacing */
 }
+
+
 
 .btn{
   display: inline-block;
   margin-top: 1rem;
-  background:var(--orange);
+  background:black;
   color:#fff;
   padding:.8rem 3rem;
-  border:.2rem solid var(--orange);
+  border:blue;
   cursor: pointer;
   font-size: 1.7rem;
 }
 
 .btn:hover{
-  background:rgba(255, 165, 0,.2);
-  color:var(--orange);
+  background:rgba(0, 0, 0, 0.2);
+  color:wheat;
 }
 
 header{
   position: fixed;
   top:0; left: 0; right:0;
-  background:#333;
+  background:#000000;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -82,7 +93,9 @@ header .logo{
 }
 
 header .logo span{
-  color:var(--orange);
+  color:rgb(255, 255, 255);
+  border-radius: 100px;
+  border-color: rgb(245, 245, 245);
 }
 
 header .navbar a{
@@ -92,7 +105,7 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-  color:var(--orange);
+  color:rgb(19, 9, 158);
 }
 
 header .icons i{
@@ -103,7 +116,7 @@ header .icons i{
 }
 
 header .icons i:hover{
-  color:var(--orange);
+  color:rgb(19, 9, 158);
 }
 
 header .search-bar-container{
@@ -139,7 +152,7 @@ header .search-bar-container label{
 }
 
 header .search-bar-container label:hover{
-  color:var(--orange);
+  color:blue;
 }
 
 .login-form-container{
@@ -185,7 +198,7 @@ header .search-bar-container label:hover{
 }
 
 .login-form-container form .box:focus{
-  border-color: var(--orange);;
+  border-color: rgb(19, 9, 158);
 }
 
 .login-form-container form #remember{
@@ -208,7 +221,7 @@ header .search-bar-container label:hover{
 }
 
 .login-form-container form p a{
-  color:var(--orange);
+  color:rgb(19, 9, 158);
 }
 
 .login-form-container form p a:hover{
@@ -289,7 +302,7 @@ header .search-bar-container label:hover{
 }
 
 .home .controls .vid-btn.active{
-  background:var(--orange);
+  background:rgb(19, 9, 158);
 }
 
 .book .row{
@@ -362,7 +375,7 @@ header .search-bar-container label:hover{
 }
 
 .packages .box-container .box .content h3 i{
-  color:var(--orange);
+  color:rgb(19, 9, 158);
 }
 
 .packages .box-container .box .content p{
@@ -373,7 +386,7 @@ header .search-bar-container label:hover{
 
 .packages .box-container .box .content .stars i{
   font-size:1.7rem;
-  color:var(--orange);
+  color:rgb(19, 9, 158);
 }
 
 .packages .box-container .box .content .price{
@@ -404,7 +417,7 @@ header .search-bar-container label:hover{
 .services .box-container .box i{
   padding:1rem;
   font-size: 5rem;
-  color:var(--orange);
+  color:rgb(19, 9, 158);
 }
 
 .services .box-container .box h3{
@@ -461,7 +474,7 @@ header .search-bar-container label:hover{
 
 .gallery .box-container .box .content h3{
   font-size: 2.5rem;
-  color:var(--orange);
+  color:rgb(19, 9, 158);
 }
 
 .gallery .box-container .box .content p{
@@ -501,7 +514,7 @@ header .search-bar-container label:hover{
 }
 
 .review .box .stars i{
-  color:var(--orange);
+  color:rgb(19, 9, 158);
   font-size: 1.7rem;
 }
 
@@ -554,7 +567,7 @@ header .search-bar-container label:hover{
 }
 
 .footer{
-  background:#333;
+  background:#000000;
 }
 
 .footer .box-container{
@@ -588,7 +601,7 @@ header .search-bar-container label:hover{
 }
 
 .footer .box-container .box a:hover{
-  color:var(--orange);
+  color:white;
   text-decoration: underline;
 }
 
@@ -603,7 +616,7 @@ header .search-bar-container label:hover{
 }
 
 .footer .credit span{
-  color:var(--orange);
+  color:white;
 }
 
 
@@ -645,44 +658,32 @@ header .search-bar-container label:hover{
 
 @media (max-width:768px){
 
-  /* Make the mobile menu bar visible */
   #menu-bar{
     display: initial;
   }
 
-  /* Navbar will appear as a dropdown on mobile */
   header .navbar{
     position: absolute;
-    top:100%;
-    right: 0;
-    left: 0;
+    top:100%; right:0; left: 0;
     background: #333;
     border-top: .1rem solid rgba(255,255,255,.2);
-    padding: 1rem 2rem;
+    padding:1rem 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
-  /* Active state for the navbar */
   header .navbar.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
-  /* Ensure links are block elements and easier to click */
   header .navbar a{
     display: block;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    background: #222;
     border-radius: .5rem;
-    font-size: 2rem;
+    padding:1.5rem;
+    margin:1.5rem 0;    
+    background:#222;
   }
 
-  /* Reduce icon and logo size */
-  header .icons i, header .logo{
-    font-size: 2rem;
-  }
 }
-
 
 @media (max-width:450px){
 
@@ -690,12 +691,82 @@ header .search-bar-container label:hover{
     font-size: 50%;
   }
 
-  .heading span{
-    font-size: 2.5rem;
-  }
-
   .contact .row form .inputBox input{
     width:100%;
   }
 
+}
+
+/* Mobile menu - hide navbar initially */
+/* Mobile menu - hide navbar initially */
+@media (max-width: 768px) {
+  #menu-bar {
+      display: block; /* Show menu bar icon */
+  }
+
+  .navbar {
+      position: absolute;
+      top: 100%; 
+      right: 0; 
+      left: 0;
+      background: #333;
+      padding: 1rem 2rem;
+      display: none; /* Hide navbar by default */
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navbar.active {
+      display: flex; /* Show navbar when active */
+  }
+
+  .navbar a {
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #444;
+  }
+
+  .navbar a:hover {
+      background: #222;
+      color: #ffa500;
+  }
+}
+
+
+/* Adjust general text and container sizes for mobile */
+@media (max-width: 450px) {
+  html {
+      font-size: 50%;
+  }
+
+  .heading span {
+      font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox input {
+      width: 100%;
+  }
+}
+
+/* Responsive adjustments for headings on mobile */
+@media (max-width: 768px) {
+  .heading {
+      padding: 1rem 0; /* Reduce padding on mobile */
+  }
+
+  .heading span {
+    font-size: 2.5rem; /* Reduce font size on mobile */
+    padding: 0.05rem 0.3rem; /* Further reduce padding */
+    margin: 0.03rem; /* Further reduce margin */
+}
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 450px) {
+  .heading span {
+      font-size: 2rem; /* Smaller font size for very small screens */
+  }
 }
