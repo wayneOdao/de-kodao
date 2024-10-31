@@ -84,3 +84,8 @@ var swiper = new Swiper(".brand-slider", {
         },
        },
 });
+
+// Mobile menu toggle
+document.getElementById('menu-bar').onclick = function() {
+  document.querySelector('.navbar').classList.toggle('active');
+};
